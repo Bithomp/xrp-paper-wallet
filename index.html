@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <script src="js/lodash.js"></script>
+  <script src="js/ripple-0.17.9.js"></script>
+  <script src="js/qrcode.js"></script>
+  <link rel="stylesheet" href="css/styles.css"/>
+  <title>XRP paper wallet</title>
+</head>
+<body>
+  <div class="wallet">
+    <img src="./images/wallet.png"/>
+    <div class="amount-added-text">Amount added</div>
+    <div class="date-text">Date</div>
+    <div class="note-text">Note</div>
+    <div class="instruction-text">
+      <ul>
+        <li>
+          To deposit funds to this XRP paper wallet: send XRP to the <b>ADDRESS</b>
+        </li>
+        <li>
+          To check the balance of this wallet:<br/>
+          go to <a href="https://bithomp.com/explorer" target="_blank">bithomp.com/explorer</a> and<br/>
+          enter the <b>ADDRESS</b>
+        </li>
+        <li>
+          <b>DO NOT REVEAL THE SECRET</b> until you are ready to import the balance of this wallet to a XRP client, exchange or online wallet
+        </li>
+      </ul>
+    </div>
+    <div id="secret" class="secret-text"></div>
+    <div id="address" class="address-text"></div>
+    <div id="qrcodeSecret" class="qr-secret"></div>
+    <div id="qrcodeAddress" class="qr-address"></div>
+  </div>
+  <div class="buttons">
+    <button type="button" onclick="newripple()">Generate new</button>
+    <button type="button" onClick="window.print()">Print</button>
+  </div>
+  <div class="instruction">
+    <img src="./images/instruction.png"/>
+  </div>
+  <script src="js/script.js"></script>
+</body>
+</html>

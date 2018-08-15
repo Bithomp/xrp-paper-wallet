@@ -1,0 +1,167 @@
+@font-face {
+  font-family: SF UI Display Medium;
+  src: url('../fonts/SFUIDisplay-Medium.eot');
+  src: url('../fonts/SFUIDisplay-Medium.woff2') format('woff2'),
+       url('../fonts/SFUIDisplay-Medium.woff') format('woff'),
+       url('../fonts/SFUIDisplay-Medium.ttf') format('truetype');
+}
+
+body {
+  font-family: 'SF UI Display Medium',sans-serif;
+  font-weight: 400;
+  overflow-y: scroll;
+  background-image: url(../images/background.jpg);
+  margin: 0;
+}
+
+.wallet {
+  width: 1000px;
+  height: 428px;
+  margin: 60px auto 20px auto;
+  position: relative;
+}
+
+.wallet img, .instruction img {
+  width: 100%;
+}
+
+.instruction {
+  width: 1000px;
+  margin: 60px auto 20px auto;
+  position: relative;
+  border: 2px dotted #999999;
+}
+
+.address-text, .secret-text {
+  position: absolute;
+  right: 210px;
+  width: 120px;
+  height: 60px;
+  -ms-transform: rotate(90deg);
+  -webkit-transform: rotate(90deg);
+  transform: rotate(90deg);
+  font-size: 11px;
+  word-wrap: break-word;
+}
+
+.secret-text {
+  top: 78px;
+  letter-spacing: 0.1em;
+}
+
+.address-text {
+  top: 294px;
+  letter-spacing: 0.15em;
+}
+
+.instruction-text {
+  position: absolute;
+  left: 356px;
+  top: 252px;
+  width: 260px;
+  height: 165px;
+  font-size: 10px;
+  color: #193039;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+}
+
+.instruction-text ul {
+  list-style: none;
+}
+
+.instruction-text ul li {
+  margin-bottom: 5px;
+}
+
+.instruction-text a {
+  color: #368A98;
+  text-decoration: none;
+}
+
+.amount-added-text, .date-text, .note-text {
+  position: absolute;
+  height: 20px;
+  font-size: 10px;
+  color: #193039;
+  font-weight: 500;
+  -ms-transform: rotate(180deg);
+  -webkit-transform: rotate(180deg);
+  transform: rotate(180deg);
+  text-transform: uppercase;
+}
+
+.amount-added-text {
+  left: 533px;
+  top: 146px;
+  width: 80px;
+}
+
+.date-text {
+  left: 378px;
+  top: 146px;
+  width: 40px;
+}
+
+.note-text {
+  left: 574px;
+  top: 76px;
+  width: 40px;
+}
+
+.qr-secret, .qr-address {
+  position: absolute;
+  right: 106px;
+  width: 120px;
+  height: 120px;
+}
+
+.qr-secret {
+  top: 46px;
+}
+
+.qr-address {
+  top: 258px;
+}
+
+.qr-secret img, .qr-address img {
+  -ms-transform: rotate(90deg);
+  -webkit-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+
+.buttons {
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+button {
+  background-color: #fff;
+  color: #367A9D;
+  padding: 10px 30px;
+  margin: 0 10px;
+  transition: all 0.4s; 
+  border: none;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-family: 'SF UI Display Medium',sans-serif;
+  font-weight: 400;
+}
+
+button:hover {
+  background-color: #C1F0FF;
+}
+
+@media print {
+  body {
+    background-image: none;
+    height: 750px;
+    -ms-transform: rotate(90deg);
+    -webkit-transform: rotate(90deg);
+    transform: rotate(90deg);
+  }
+  .wallet {margin: 0;}
+  button {
+    display: none;
+  }
+}
